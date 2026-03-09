@@ -25,18 +25,18 @@ curl -fsSL https://raw.githubusercontent.com/largelanguagemeowing/opencode-sessi
 
 The installer downloads the release archive, extracts the built plugin to `~/.config/opencode/plugins/session-search`, and prints the `file://` plugin path to add to your OpenCode config.
 
-### npm package
-
-Add to your `opencode.json`:
+Then add the installed plugin path to your OpenCode config:
 
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["@largelanguagemeowing/opencode-session-search@latest"]
+  "plugin": ["file:///home/your-user/.config/opencode/plugins/session-search/dist/index.js"]
 }
 ```
 
-Or for local development:
+### Local development
+
+For local development, build the plugin and reference the local file directly:
 
 ```json
 {
