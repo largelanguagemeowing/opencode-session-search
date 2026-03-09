@@ -1,9 +1,9 @@
 # OpenCode Session Search Plugin
 
-An OpenCode plugin for searching and reading past session history.
+An OpenCode plugin that adds agent-callable tools for inspecting past OpenCode sessions.
 
-- `search_sessions` finds relevant conversations by keyword
-- `read_session` reads a session by ID
+- `search_sessions` lets the agent find relevant conversations by keyword
+- `read_session` lets the agent read a session by ID
 
 ## Installation
 
