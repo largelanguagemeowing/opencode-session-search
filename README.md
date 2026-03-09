@@ -1,14 +1,9 @@
 # OpenCode Session Search Plugin
 
-Search and read past OpenCode sessions with two built-in tools:
+An OpenCode plugin for searching and reading past session history.
 
-- `search_sessions` to find relevant conversations by keyword
-- `read_session` to inspect a specific session by ID
-
-## Features
-
-- **search_sessions**: Search through all your OpenCode session conversations by keyword
-- **read_session**: Read complete session conversations by session ID
+- `search_sessions` finds relevant conversations by keyword
+- `read_session` reads a session by ID
 
 ## Installation
 
@@ -21,26 +16,12 @@ curl -fsSL https://raw.githubusercontent.com/largelanguagemeowing/opencode-sessi
 Or install a specific version:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/largelanguagemeowing/opencode-session-search/main/scripts/install.sh | bash -s -- --version v1.0.1
 curl -fsSL https://raw.githubusercontent.com/largelanguagemeowing/opencode-session-search/main/scripts/install.sh | bash -s -- --version v1.0.2
 ```
 
 The installer downloads the release archive, installs `session-search.js` into `~/.config/opencode/plugins/`, and ensures `~/.config/opencode/package.json` includes `@opencode-ai/plugin` for local plugin dependencies.
 
 No `opencode.json` or `opencode.jsonc` edit is required for the global local-plugin install path.
-
-### Release archive
-
-Each tagged release also includes a `.tar.gz` archive containing:
-
-- `session-search.js`
-- `session-search.js.map`
-- `dist/index.js`
-- `dist/index.d.ts`
-- `dist/index.js.map`
-- `README.md`
-- `LICENSE`
-- `install.sh`
 
 ## Tools
 
@@ -67,25 +48,12 @@ Read a session conversation by session ID and return its messages.
 
 ## Development
 
-For local development, build the plugin and copy the built file into your OpenCode plugin directory:
+For local development:
 
 ```bash
-npm run build
-cp dist/index.js ~/.config/opencode/plugins/session-search.js
-```
-
-```bash
-# Install dependencies
 npm install
-
-# Build the plugin
 npm run build
-
-# Type check
 npm run lint
-
-# Build release archive
-npm run package
 ```
 
 ## License
