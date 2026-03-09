@@ -12,8 +12,6 @@ Search and read past OpenCode sessions with two built-in tools:
 
 ## Installation
 
-### Release installer
-
 Install from the latest tagged GitHub release:
 
 ```bash
@@ -30,15 +28,6 @@ curl -fsSL https://raw.githubusercontent.com/largelanguagemeowing/opencode-sessi
 The installer downloads the release archive, installs `session-search.js` into `~/.config/opencode/plugins/`, and ensures `~/.config/opencode/package.json` includes `@opencode-ai/plugin` for local plugin dependencies.
 
 No `opencode.json` or `opencode.jsonc` edit is required for the global local-plugin install path.
-
-### Local development
-
-For local development, build the plugin and either copy `dist/index.js` into `~/.config/opencode/plugins/` or use the release installer flow.
-
-```bash
-npm run build
-cp dist/index.js ~/.config/opencode/plugins/session-search.js
-```
 
 ### Release archive
 
@@ -77,6 +66,13 @@ Read a session conversation by session ID and return its messages.
 - `maxCharsPerMessage` (optional): Maximum characters shown per message (default: 2000)
 
 ## Development
+
+For local development, build the plugin and copy the built file into your OpenCode plugin directory:
+
+```bash
+npm run build
+cp dist/index.js ~/.config/opencode/plugins/session-search.js
+```
 
 ```bash
 # Install dependencies
