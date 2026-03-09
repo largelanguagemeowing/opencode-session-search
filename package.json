@@ -1,6 +1,6 @@
 {
   "name": "@largelanguagemeowing/opencode-session-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenCode plugin for searching and retrieving session history",
   "type": "module",
   "main": "dist/index.js",
@@ -18,8 +18,9 @@
     "access": "public"
   },
   "scripts": {
-    "build": "bun run build.ts",
-    "lint": "tsc --noEmit"
+    "build": "tsc -p tsconfig.json",
+    "lint": "tsc --noEmit",
+    "package": "bash ./scripts/package-release.sh"
   },
   "devDependencies": {
     "@types/node": "^25.2.0",

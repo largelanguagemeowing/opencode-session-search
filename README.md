@@ -9,6 +9,24 @@ An OpenCode plugin that enables searching and retrieving session history.
 
 ## Installation
 
+### Release installer
+
+Install from the latest tagged GitHub release:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/largelanguagemeowing/opencode-session-search/main/scripts/install.sh | bash
+```
+
+Or install a specific version:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/largelanguagemeowing/opencode-session-search/main/scripts/install.sh | bash -s -- --version v1.0.1
+```
+
+The installer downloads the release archive, extracts the built plugin to `~/.config/opencode/plugins/session-search`, and prints the `file://` plugin path to add to your OpenCode config.
+
+### npm package
+
 Add to your `opencode.json`:
 
 ```json
@@ -25,6 +43,17 @@ Or for local development:
   "plugin": ["file:///absolute/path/to/opencode-session-search/dist/index.js"]
 }
 ```
+
+### Release archive
+
+Each tagged release also includes a `.tar.gz` archive containing:
+
+- `dist/index.js`
+- `dist/index.d.ts`
+- `dist/index.js.map`
+- `README.md`
+- `LICENSE`
+- `install.sh`
 
 ## Tools
 
@@ -60,6 +89,9 @@ npm run build
 
 # Type check
 npm run lint
+
+# Build release archive
+npm run package
 ```
 
 ## License
