@@ -1,6 +1,6 @@
 {
   "name": "@largelanguagemeowing/opencode-session-search",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OpenCode plugin for searching and retrieving session history",
   "type": "module",
   "main": "dist/index.js",

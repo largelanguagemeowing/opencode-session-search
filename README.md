@@ -21,33 +21,28 @@ Or install a specific version:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/largelanguagemeowing/opencode-session-search/main/scripts/install.sh | bash -s -- --version v1.0.1
+curl -fsSL https://raw.githubusercontent.com/largelanguagemeowing/opencode-session-search/main/scripts/install.sh | bash -s -- --version v1.0.2
 ```
 
-The installer downloads the release archive, extracts the built plugin to `~/.config/opencode/plugins/session-search`, and prints the `file://` plugin path to add to your OpenCode config.
+The installer downloads the release archive, installs `session-search.js` into `~/.config/opencode/plugins/`, and ensures `~/.config/opencode/package.json` includes `@opencode-ai/plugin` for local plugin dependencies.
 
-Then add the installed plugin path to your OpenCode config:
-
-```json
-{
-  "$schema": "https://opencode.ai/config.json",
-  "plugin": ["file:///home/your-user/.config/opencode/plugins/session-search/dist/index.js"]
-}
-```
+No `opencode.json` or `opencode.jsonc` edit is required for the global local-plugin install path.
 
 ### Local development
 
-For local development, build the plugin and reference the local file directly:
+For local development, build the plugin and either copy `dist/index.js` into `~/.config/opencode/plugins/` or use the release installer flow.
 
-```json
-{
-  "plugin": ["file:///absolute/path/to/opencode-session-search/dist/index.js"]
-}
+```bash
+npm run build
+cp dist/index.js ~/.config/opencode/plugins/session-search.js
 ```
 
 ### Release archive
 
 Each tagged release also includes a `.tar.gz` archive containing:
 
+- `session-search.js`
+- `session-search.js.map`
 - `dist/index.js`
 - `dist/index.d.ts`
 - `dist/index.js.map`

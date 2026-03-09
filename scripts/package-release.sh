@@ -29,9 +29,11 @@ npm run build
 
 cp "$ROOT_DIR/dist/index.js" "$STAGE_DIR/dist/index.js"
 cp "$ROOT_DIR/dist/index.d.ts" "$STAGE_DIR/dist/index.d.ts"
+cp "$ROOT_DIR/dist/index.js" "$STAGE_DIR/session-search.js"
 
 if [ -f "$ROOT_DIR/dist/index.js.map" ]; then
   cp "$ROOT_DIR/dist/index.js.map" "$STAGE_DIR/dist/index.js.map"
+  cp "$ROOT_DIR/dist/index.js.map" "$STAGE_DIR/session-search.js.map"
 fi
 
 cp "$ROOT_DIR/README.md" "$STAGE_DIR/README.md"
