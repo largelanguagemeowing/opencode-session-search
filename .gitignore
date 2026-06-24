@@ -4,3 +4,6 @@ releases/
 *.log
 .DS_Store
 .env
+.agents/
+docs/
+skills-lock.json
